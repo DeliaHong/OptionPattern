@@ -14,7 +14,6 @@ namespace OptionsPattern
                 .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
                 .Build();
 
-            serviceCollection.AddOptions();
             serviceCollection.Configure<ApiGatewayOption>(Configuration.GetSection("ApiGateway:Url"));
         }
     }
